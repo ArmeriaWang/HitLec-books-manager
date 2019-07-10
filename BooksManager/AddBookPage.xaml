@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BooksManager.AddBookPage">
+    <ContentPage.Content>
+        <StackLayout Margin="45,25,45,0">
+        <Label Text="添加图书"
+               HorizontalOptions="Center"
+               FontSize="30"
+               FontAttributes="Bold"/>
+        <Label Text="Books Manager"
+               HorizontalOptions="Center"
+               FontSize="15" />
+        <Label />
+        <Entry Placeholder="书名"
+               Text="{Binding Name}"
+               IsSpellCheckEnabled="true" />
+        <Entry Placeholder="作者"
+               Text="{Binding Author}" />
+        <Entry Placeholder="描述"
+               Text="{Binding Description}" />
+        <Button Text="添加"
+                Clicked="OnAddedButtonClicked"
+                FontSize="15" />
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BooksManager.DetailedBookPage"
+             Title="图书详情">
+    
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,25">
+        <Label Text="图书详情"
+               HorizontalOptions="Center"
+               FontSize="30"
+               FontAttributes="Bold"/>
+        <Label Text="Books Manager"
+               HorizontalOptions="Center"
+               FontSize="15" />
+        <Label />
+        <Grid Margin="20,10,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.8*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Text="图书ID  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"/>
+            <Entry Grid.Row="0"
+                   Grid.Column="1"
+                   Text="{Binding ID}"
+                   IsReadOnly="true"
+                   TextColor="Gray" />
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Text="书名  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"/>
+            <Entry Grid.Row="1"
+                   Grid.Column="1"
+                   Text="{Binding Name}"
+                   IsReadOnly="true"
+                   TextColor="Gray" />
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Text="作者  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"/>
+            <Entry Grid.Row="2"
+                   Grid.Column="1"
+                   Text="{Binding Author}"
+                   IsReadOnly="true"
+                   TextColor="Gray" />
+            <Label Grid.Row="3"
+                   Grid.Column="0"
+                   Text="描述  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"/>
+            <Entry Grid.Row="3"
+                   Grid.Column="1"
+                   Text="{Binding Description}"
+                   TextColor="Gray" />
+            <Label Grid.Row="4"
+                   Grid.Column="0"
+                   Text="状态  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18" />
+            <Entry Grid.Row="4"
+                   Grid.Column="1"
+                   Text="{Binding strLent}"
+                   TextColor="Gray"
+                   IsReadOnly="true" />
+        </Grid>
+            
+        <Grid Margin="20,10,20,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.0*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0"
+                    Text="借阅"
+                    Clicked="OnBorrowButtonClicked"
+                    FontSize="15" />
+        </Grid>
+        <Grid Margin="20,0,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0"
+                    Text="保存修改"
+                    Clicked="OnSaveButtonClicked"
+                    FontSize="15" />
+            <Button Grid.Column="1"
+                    Text="删除"
+                    Clicked="OnDeleteButtonClicked"
+                    FontSize="15" />
+        </Grid>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

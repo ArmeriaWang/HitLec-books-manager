@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BooksManager.ViewBooksPage">
+
+        
+    <StackLayout Margin="20,10,20,25">
+    <Entry Placeholder="输入搜索"
+           x:Name="Title"
+           FontSize="18"
+           TextChanged="OnKeywordChanged"
+           BackgroundColor="Silver" />
+
+    <ListView x:Name="listView"
+              ItemSelected="OnListViewItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}"
+                          Detail="{Binding Author}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+        
+    <Grid Margin="0,10,0,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Button Grid.Column="0"
+                Text="添加新图书"
+                Clicked="OnAddButtonClicked"
+                FontSize="15" />
+        <Button Grid.Column="1"
+                Text="借还记录"
+                Clicked="OnViewRecordsButtonClicked"
+                FontSize="15" />
+    </Grid>
+    
+    </StackLayout>
+    
+</ContentPage>

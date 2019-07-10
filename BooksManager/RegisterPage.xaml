@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BooksManager.RegisterPage"
+             Title="注册">
+    
+    <StackLayout Margin="70,25,70,0">
+        <Label Text="用户注册"
+               HorizontalOptions="Center"
+               FontSize="30"
+               FontAttributes="Bold"/>
+        <Label Text="Books Manager"
+               HorizontalOptions="Center"
+               FontSize="15" />
+        <Label />
+        <Entry Placeholder="用户名"
+               Text="{Binding Name}"
+               IsSpellCheckEnabled="false"
+               MaxLength="8" />
+        <Entry Placeholder="密码"
+               Text="{Binding Password}"
+               IsSpellCheckEnabled="false"
+               IsPassword="true"
+               MaxLength="20" />
+        <Button Text="注册"
+                Clicked="OnRegisterButtonClicked"
+                FontSize="15" />
+    </StackLayout>
+    
+</ContentPage>

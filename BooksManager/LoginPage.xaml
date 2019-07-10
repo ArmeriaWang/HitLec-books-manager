@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BooksManager.MainPage">
+    
+    <StackLayout Margin="20,100,20,25">
+        <Label Text="用户登录"
+               HorizontalOptions="Center"
+               FontSize="30"
+               FontAttributes="Bold"/>
+        <Label Text="Books Manager"
+               HorizontalOptions="Center"
+               FontSize="15" />
+        <Label />
+        <Entry Placeholder="用户ID"
+               BindingContext=""
+               Text="{Binding Text}"
+               IsSpellCheckEnabled="false"
+               MaxLength="10" />
+        <Entry Placeholder="密码"
+               Text="{Binding Text}"
+               IsSpellCheckEnabled="false"
+               IsPassword="true"
+               MaxLength="20" />
+        <Label />
+        <Button Text="登录"
+                Clicked="OnLoginButtonClicked"
+                FontSize="15" />
+    </StackLayout>
+    
+</ContentPage>
